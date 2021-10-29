@@ -1,15 +1,11 @@
 
 # ### First, lets import Bokeh! In the Jupyer Lab environment, we simply need to pass the following: 
 
-# In[1]:
-
 
 import bokeh
 
 
 # ### Then, let's import important python libraries like numpy, pandas, and math. Then, we'll import our first Bokeh libraries!
-
-# In[2]:
 
 
 import numpy as np
@@ -29,13 +25,13 @@ from bokeh.transform import dodge
 
 # ### Now, we'll read in our mushroom data set, clean up our values to  make them more understandable, and pick out just the columns we'll need for our viualizations. 
 
-# In[3]:
-
 
 df = pd.read_csv("/home/jovyan/work/resources/assignment3/assets/mush.csv")
 pd.set_option('display.max_columns', None)
 df['class'].replace(to_replace="p",value="poisonous", inplace=True)
 df['class'].replace(to_replace="e",value="edible", inplace=True)
+
+# In hindsight - a dictionary would have been MUCH more efficient. But for a beginner, not too bad!
 
 df['cap-color'].replace(to_replace="n",value="brown", inplace=True)
 df['cap-color'].replace(to_replace="b",value="buff", inplace=True)
@@ -102,17 +98,11 @@ df.head()
 
 # ### Different from some othe visualization libraries in Python, in order to show any sort of output on the screen we must first specify that was want to actually see the output inside of the Jupyter Notebook environment itself.
 
-# In[4]:
-
-
-# The figure will be right in the Jupyter Notebook
 output_notebook()
 
 
 # ### Next, lets take a look at how many mushrooms species in the data set are poisonous, and how many aren't. 
 # #### Let's clean up the data and create a dataframes of class, frequency, angle needed for the pie chart, and the color we want each class.
-
-# In[5]:
 
 
 #How many mushrooms in the data set are poisoness and how many are edible 
@@ -137,8 +127,6 @@ data
 
 
 # #### To easily compare one categorical variable, with only two unique values, we are going to make a simple pie chart.
-
-# In[6]:
 
 
 # The "figure()" command is used to set the size, title, and whether you want some interactivity or not 
@@ -171,8 +159,6 @@ show(p)
 # ### Now lets, look at the distribution of mushrooms by their cap colors 
 # #### Let's clean up the data a little bit by creating a list of cap colors and another list of their corespsonding frequencies, and combining them all into a pandas series. 
 
-# In[7]:
-
 
 #Lets clean up the data a little bit
 cap_color_count = df['cap-color'].value_counts()
@@ -188,8 +174,6 @@ datacolor = pd.Series(cap_color_count).reset_index(name='value').rename(columns=
 
 
 # ### Let's specify that we want a vertical bar graph to show us frequency of cap color
-
-# In[8]:
 
 
 #We want a x axis of cap_color, a title, and no interactivity 
@@ -211,8 +195,6 @@ show(p)
 # ### Let's dive into nested categories with Bokeh.
 # #### I want to be able to see if there are any definitive ways to tell if a mushrooms is edible. So, I'l start by looking at color. Are green mushrooms ALWAYS poisonous? Can you eat all the red ones? Again, I'm going to start by cleaning up the data
 
-# In[9]:
-
 
 poisonous = [] #Poisonous color cap list
 edible = []    #Edible color cap list
@@ -233,7 +215,6 @@ source = ColumnDataSource(data=data)
 
 # #### In order to create a nested bar chart, we need to specify one figure, but with two different bars for each color - one for poisonous mushrooms and one for edible ones. These will then show up side by side. Again, I'm adding some interactivity to the figure, to get a better idea of exact numbers. 
 
-# In[10]:
 
 
 TOOLTIPS = [
@@ -256,8 +237,6 @@ show(p)
 # #### This still doesn't really tell us much. The only suprising thing is that all the green and purple mushrooms from this data set are _edible_. 
 
 # ### Since color doesn't show us any difinitive patterns, let try it with odor. I've copied the code from above, but modified it in order to show poisonousness by odor. 
-
-# In[11]:
 
 
 odor_count = df['odor'].value_counts()
@@ -301,8 +280,6 @@ show(p)
 # #### Only 3.4 % of mushrooms with no smell are poisonous... Would you risk it?
 # ### Take some to experment with other variables, using the code above, or code from scratch and create brand new visualizations. Either way, there is so mushroom for more exploration! 
 
-# In[12]:
-
 
 from zipfile import ZipFile
 
@@ -314,22 +291,3 @@ zipObj.write('mushroms.png')
 zipObj.write('assets/mush.csv')
 # close the Zip File
 zipObj.close()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
