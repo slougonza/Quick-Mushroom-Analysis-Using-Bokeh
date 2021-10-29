@@ -21,6 +21,7 @@ This dataset contains mushroom samples from 23 species of gilled mushrooms drawn
 As we dive in, I would urge you not to judge the poisonous mushrooms too harshly... they are all fungis!
 
 ### **Make sure to actually run the code so you can see the interactivity!
+Here are a few outputs you'll see
 
 
 ![image](https://user-images.githubusercontent.com/79933773/139507861-b7d89389-77d7-4fde-8422-8650b03ac6ab.png)
