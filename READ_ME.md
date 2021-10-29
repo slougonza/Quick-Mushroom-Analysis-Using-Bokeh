@@ -19,6 +19,5 @@
 # 
 # 
 
-# ![title](mushroms.png)
-
+![mushroms (1)](https://user-images.githubusercontent.com/79933773/139507231-4ede9236-1f55-460b-9d1d-35a2a8adc542.png)
 # https://www.instagram.com/p/32J4AFSgh8/
