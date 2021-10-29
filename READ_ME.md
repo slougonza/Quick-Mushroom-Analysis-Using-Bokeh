@@ -1,5 +1,13 @@
 # Introduction to Visualizing Categorical Data with Bokeh
 
+## I wanted to teach myself a new visualization library, and what better way than with nerdy mushroom data!
+#### Bonus: Keep an eye out for all HILARIOUS puns. 
+
+![mushroms (1)](https://user-images.githubusercontent.com/79933773/139507231-4ede9236-1f55-460b-9d1d-35a2a8adc542.png)
+https://www.instagram.com/p/32J4AFSgh8/
+
+
+
 ## What is Bokeh?
 Bokeh is a open-sourced visulazation library for Python, specificaly know for its interactivity. While any visualization works well for simple charts, Bokeh looks extremely modern, and doesn't have to be modified in order to have a "clean" look. As this is a declaritive language, it is also is extremely user friendly, especially when it comes to interactivity of visuaizations. It also allows users to output visuaizations, not only in the Jupyter Lab environment, but directly to web browsers a well. 
 
@@ -14,5 +22,6 @@ As we dive in, I would urge you not to judge the poisonous mushrooms too harshly
 
 ### **Make sure to actually run the code so you can see the interactivity!
 
-![mushroms (1)](https://user-images.githubusercontent.com/79933773/139507231-4ede9236-1f55-460b-9d1d-35a2a8adc542.png)
-https://www.instagram.com/p/32J4AFSgh8/
+
+![image](https://user-images.githubusercontent.com/79933773/139507861-b7d89389-77d7-4fde-8422-8650b03ac6ab.png)
+![image](https://user-images.githubusercontent.com/79933773/139507898-164f215d-488e-488d-9811-8e440894f4af.png)
